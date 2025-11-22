@@ -1,0 +1,44 @@
+# 📚 Python `collections` 모듈 정리
+
+`collections`는 파이썬 기본 자료구조(list, tuple, dict)를 보완해주는 유용한 데이터 구조 모음입니다.  
+데이터 처리, 알고리즘 문제 해결에서 자주 사용됩니다.
+
+---
+
+# 🔗 주요 클래스 소개
+
+## 1. `Counter`
+- 요소의 **개수를 자동으로 세주는** 딕셔너리 기반 자료구조
+- 주로 문자열, 리스트 빈도 계산에 사용
+- 사칙연산(+, -, |, &) 가능
+
+---
+
+## 2. `defaultdict`
+- 존재하지 않는 키에 접근해도 오류가 나지 않음
+- 기본값을 자동으로 부여하는 dict
+- 예: `defaultdict(int)` → 기본값 0  
+       `defaultdict(list)` → 자동으로 빈 리스트 생성
+
+---
+
+## 3. `deque`
+- 양쪽에서 **빠르게 삽입/삭제** 가능한 자료구조
+- 큐/스택 구현에 최적화
+- O(1)로 appendleft() / popleft() 가능
+
+---
+
+## 4. `OrderedDict`
+- 삽입된 순서를 기억하는 dict  
+(*파이썬 3.7 이후 기본 dict도 순서를 보장하지만, 일부 고급 기능은 여전히 유용*)
+
+---
+
+## 5. `namedtuple`
+- 이름을 가진 tuple 생성
+- 클래스를 대신해 간단한 구조체처럼 사용 가능
+```python
+Point = namedtuple("Point", "x y")
+p = Point(1, 2)
+print(p.x, p.y)
