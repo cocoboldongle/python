@@ -1,0 +1,15 @@
+# 🔢 Python `Counter` 완전 정리
+
+`Counter`는 파이썬 `collections` 모듈에 포함된 클래스로,  
+리스트, 문자열 등 **이터러블 내부 요소의 등장 횟수를 자동으로 세주는** 자료구조입니다.  
+데이터 빈도 분석, 중복 처리, 코딩테스트 문제 해결에 매우 자주 사용됩니다.
+
+---
+
+# 📌 1. Counter 기본 사용
+
+```python
+from collections import Counter
+
+Counter(["a", "b", "a", "c", "a"])
+# Counter({'a': 3, 'b': 1, 'c': 1})
